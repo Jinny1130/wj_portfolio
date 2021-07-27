@@ -1,0 +1,525 @@
+/* 폰트 */
+@font-face {
+    font-family: 'NEXON Lv1 Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ===================================== */
+/* default */
+
+.nanumsquare {
+    font-family: 'NanumSquare', sans-serif !important;
+}
+
+.container{width: 90%;max-width: 1400px; margin: 0 auto;}
+main{background-color:#fff;}
+
+.section{margin-top:200px;}
+
+.secTitle{
+    text-align: center;
+    color: #4da5f7;
+    font-size: 45px;
+    font-weight: bold;
+    padding: 40px 0;
+}
+.secTitleWT{color:#fff; padding:60px 0 0 0;}
+
+
+
+/* ===================================== */
+
+
+/* header */
+#header{
+    padding:8px 0;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100000;
+    background-color: rgb(255 255 255 / 50%);
+    transition:0.5s;
+}
+.scroll #header{background-color:#0093ee;}
+
+
+#logo{padding:0 3%; margin-bottom:0; float:left;}
+.gnb{
+    float:right;
+}
+#gnb{
+    margin-bottom:0;
+}
+#gnb li{
+    padding: 0 30px; 
+    float:left;
+    line-height: 60px; /* 플롯레프트,라인하이트 추가함 */
+}
+#gnb a{
+    font-family: 'NEXON Lv1 Gothic';
+    color:#0093ee;
+    text-decoration: none;
+    cursor: pointer;
+    font-size:18px;
+}
+.scroll #gnb a{color:#fff;}
+
+#gnb li.on a{
+    background-color: rgb(255 255 255 / 80%);
+    color: #0093ee;
+    border-radius: 30px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.mobile_toggle_btn{display:none;}
+
+
+
+
+
+
+
+
+
+/* 비주얼 */
+.WJ{
+    position:fixed;
+    top:0;
+    width:100%;
+    height: 100vh;
+    z-index: -99;
+}
+.m_WJ{display:none; width:100%; height: 100vh;}
+.cloud{
+    width:100%;
+    z-index: 100;
+    position: relative;
+    top: 285px;
+}
+
+
+
+
+
+
+
+/* ABOUT */
+#sec1{margin-top:225px; padding-top:100px;}
+
+.aboutWrap{display:flex; padding:100px 0;}
+
+.aboutL{width:50%;}
+.aboutL img{
+    width: 120%;
+    margin-left: -170px;
+}
+
+.aboutR{width:50%;}
+.aboutR h4{font-weight: bold; font-size:23px;}
+.aboutR p{font-size:17px;}
+
+.education{margin:40px 0;}
+
+.skillWrap{display:flex;}
+
+.skills{width:60%; margin-right: 30px;}
+#stage{/* Skills Icon */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.box{margin:0 0 10px 0; width:18%;}
+.box img{width:90%;}
+
+.licenses{width:40%;}
+
+
+
+
+
+
+
+
+
+
+/* WORK */
+#sec2{height: 1000px;}
+#sec2::after{content:''; display:block; clear:both;}
+.workWrap{
+    padding:100px 0;
+}
+.m-workWrap{display:none;}
+
+.cardWrap1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cardWrap2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    bottom: -350px;
+}
+
+
+.card-container{
+    position:relative;
+    cursor:pointer;
+    width:31%;
+    perspective:600px;
+}
+.card{
+    width:100%;
+    position:absolute;
+    transition:1s ease-in-out;
+    transform-style: preserve-3d;
+    border:none;
+}
+.side{width:100%;}
+.side img{width:100%; height: 300px;}
+
+.card:hover{
+    transform:rotateY(180deg);
+}
+.side{
+    position:absolute;
+    width:100%;
+    height: 300px;
+    backface-visibility: hidden;
+}
+.back{
+    text-align: center;
+    transform:rotateY(180deg);
+}
+
+
+
+/* 카드뒷면 설명 */
+.work-descript{
+    width:100%;
+    padding:4% 2%;
+    border-radius: 3%;
+    border:1px solid #7abaff;
+}
+
+.description{
+    margin:5% 7% 0 7%;
+}
+.description p{
+    width:100%;
+    text-align: left;
+    margin-bottom:5px;
+    font-family: 'NanumSquare';
+    color:#444;
+    font-size:15px;
+}
+.description p:first-child{
+    margin-bottom:10px;
+    font-size:18px;
+}
+.description p.red{
+    color:rgb(255, 77, 77);
+}
+.description p.tools{font-size:13px;}
+
+.homepageBtn{
+    width:100%;
+    display:flex;
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+}
+.homepageBtn a{
+    display: flex;
+    justify-content: space-evenly;
+    width: 46%; height: 50px; line-height: 50px;
+    margin:10px 2%;
+    font-family:'NanumSquare'; color:#fff;
+    background: rgb(0,172,238);
+    background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+    border-radius: 5px;
+    box-shadow:inset 2px 2px 2px 0px rgb(255 255 255 / 80%), 7px 7px 5px 0px rgb(0 0 0 / 3%), 4px 4px 5px 0px rgb(0 0 0 / 20%)
+}
+.singleBtn a{width:100%;}
+
+
+
+
+
+
+
+
+
+
+/* pre-interview & contact*/
+
+/* pre-interview */
+.secWrap3{display:flex; width:100%; overflow:hidden;}
+
+.interviewWrap{
+    background-color:#65c9ff; 
+    width:50%;
+    z-index: 3;
+}
+.preInterview>h2{
+    text-align: right;
+    margin-right:7%;
+}
+.preInterview>p{
+    text-align: right;
+    margin-right:7%;
+    color:#fff;
+}
+
+.interview-table{margin:11%; width:70%;}
+#interview{transform: translateX(20%); color:#fff;}
+#interview h4{display:inline-block;}
+#interview span{font-size:19px;}
+
+
+#interview dt{
+    border-top:1px solid #fff;
+    padding:20px 10px;
+}
+#interview dd{
+    background-color:#fff; color:#222;
+    padding:20px; display:none;
+}
+#interview dt.on + dd{display:block;}
+.xi-caret-down{float: right;}
+#interview dt.on .xi-caret-down:before{content:'\e92f';}
+
+
+
+/* contact */
+.contactWrap{
+    background-color:#1eaaf6;
+    width:50%;
+    position:relative;
+}
+.contact>h2{
+    text-align: left;
+    margin-left:7%;
+}
+.contact>p{
+    text-align: left;
+    margin-left:7%;
+    color:#fff;
+}
+
+.contactWrap>img{position: absolute;}
+.cloudBg{
+    width:110%;
+    bottom:0;
+    margin-left:-10%; 
+    mix-blend-mode: lighten;
+}
+.flight{
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+}
+.bordingPass{
+    position:absolute;
+    top:55%; left:50%;
+    transform:translate(-50%,-50%);
+}
+.bordingPass a{
+    display:block;
+    position: absolute;
+    bottom: 5%;
+    left: 7%;
+    color: #444;
+    font-size: 18px;
+    font-weight: bold;
+    transform:scale(1);
+    transition:all 0.5s;
+}
+.bordingPass a:hover{transform:scale(1.1); color:#0093ee;}
+
+
+
+/* footer */
+#footer{
+    position: fixed;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: #fff;
+    z-index: 5;
+}
+
+
+
+
+
+
+
+
+
+/* 모바일 */
+
+@media all and (max-width:768px){
+    
+    
+    
+    /* 디폴트 */
+    .container{width:100%;}
+    .allSection{margin-top:500px;}
+
+
+
+    /* ========================================= */
+
+    /* header */
+    nav.gnb{
+        position: absolute;
+        width: 100%;
+        left: 0;top: 100%;
+        background-color: #fff;
+        display:none;
+    }
+    
+    
+    #gnb li{
+        border-bottom:1px solid #65c9ff;
+        padding: 0;
+        float: none;
+        line-height: 30px;
+        text-align: center;
+    }
+    #gnb li a{
+        display: block;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    .scroll #gnb li a{color:#0093ee;}
+    #gnb li.on a{color:#fff; background-color:transparent;}
+    #gnb li.on{background-color:#65c9ff;}
+
+    .mobile_toggle_btn{
+        float: right;
+        display: block;
+        width: 30px;
+        margin:3%;
+        cursor: pointer;
+    }
+    .mobile_toggle_btn span{
+        display: block;
+        width: 100%; height: 4px;
+        background:#0093ee;
+        border-radius: 20px;
+    }
+    .bar2{margin:10px 0;}
+
+    .scroll .mobile_toggle_btn span{background:#fff;}
+    
+
+
+
+
+
+    /* 비주얼 */
+    .WJ{display: none;}
+    .m_WJ{
+        display:block;
+        position:fixed;
+        top:0;
+        width:100%;
+        z-index: -99;
+    }
+
+    .cloud{width:100%; top:500px;}
+
+
+
+    /* about */
+    .aboutWrap{display:block;}
+    .aboutL{width:100%;}
+    .aboutL img{width:100%; margin-left:0;}
+
+    .aboutR{width:100%; margin-top:100px; padding:0 3%;}
+    .aboutR h2{font-size:20px;}
+    .aboutR p{font-size: 14px;}
+    .aboutR .enter{display:none;}
+
+
+
+
+
+
+
+    /* work */
+    #sec2{height:inherit;}
+    .workWrap{display:none;}
+    .m-workWrap{display:block;}
+
+    .work-descript{
+        padding:2%;
+        margin:10% 0;
+    }
+    .m-workWrap img{
+        width:95%;
+        position: relative;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .description p{
+        font-size: 14px;
+    }
+    .description p strong{font-size:17px;}
+
+    .homepageBtn{
+        position:unset;
+    }
+
+
+
+
+
+
+
+
+    /* interview + contact */
+    .secWrap3{display:block;}
+    .interviewWrap{width:100%; height:1000px; display:block;}
+    .preInterview>h2, .preInterview>p, .contact>h2, .contact>p{text-align: center; margin-right:0; margin-left:0;}
+
+    #interview{transform:translateX(0);}
+    .interview-table {
+        width: 100% !important;
+        margin:15% 0 0 0;
+    }
+    #interview dt{font-size:18px;}
+
+    .contactWrap{width:100%; height: 100vh; display:block;}
+    .contact{margin: 0 0 15% 0;}
+    .cloudBg{margin-left:-15%;}
+    .bordingPass{
+        position: static;
+        width: 100%;
+        top:0; left:0;
+        transform: translate(0,0);
+        width:90vw;
+    }
+    .bordingPass img{width:100%;}
+
+
+
+
+
+
+    /* footer */
+    #footer{font-size:14px; width:100%; text-align: center;}
+
+
+
+
+}
